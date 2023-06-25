@@ -29,6 +29,7 @@ global.owner = [
 
 global.suittag = ['5219993404349'] 
 global.prems = ['51995386439'] 
+global.reportes_solicitudes = ['5219992095479']
 
 global.packname = '(☞ﾟ∀ﾟ)☞'
 global.author = '★𝚃𝚑𝚎 𝙼𝚢𝚜𝚝𝚒𝚌 - 𝙱𝚘𝚝★'
@@ -40,6 +41,7 @@ global.imagen1 = fs.readFileSync('./Menu2.jpg')
 global.imagen2 = fs.readFileSync('./src/nuevobot.jpg') 
 global.imagen3 = fs.readFileSync('./src/Pre Bot Publi.png')
 global.imagen4 = fs.readFileSync('./Menu.png')
+global.imagen5 = fs.readFileSync('./src/+18.jpg')
 
 global.mods = [] 
 
