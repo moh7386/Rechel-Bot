@@ -1,10 +1,12 @@
 let handler = async (m, { conn, command, text }) => {
-let love = `*❤️❤️ MEDIDOR DE AMOR ❤️❤️*
-*El amor de ${text} por ti es de* *${Math.floor(Math.random() * 100)}%* *de un 100%*
-*Deberias pedirle que sea tu  novia/o ?*
+let love = `*❤️❤️ مقياس الحب ❤️❤️*
+*نسبة حب ${text} لك* *${Math.floor(Math.random() * 100)}%* *من 100%*
+
+ *هل يجب أن تطلب منه / منها أن يكون صديقك 😔💍 ️؟*
+  
 `.trim()
 m.reply(love, null, { mentions: conn.parseMention(love) })}
 handler.help = ['love']
 handler.tags = ['fun']
-handler.command = /^(love)$/i
+handler.command = /^(love|حب)$/i
 export default handler

@@ -1,12 +1,21 @@
-let handler = async (m, { command, text }) => m.reply(`
-*⁉️ 𝐏𝐑𝐄𝐆𝐔𝐍𝐓𝐀𝐒 ⁉️*
-  
-*𝙿𝚁𝙴𝙶𝚄𝙽𝚃𝙰:* ${text}
-*𝚁𝙴𝚂𝙿𝚄𝙴𝚂𝚃𝙰:* ${['Si','Tal vez sí','Posiblemente','Probablemente no','No','Imposible'].getRandom()}
-`.trim(), null, m.mentionedJid ? {
+let handler = async (m, { command, usedPrefix, text }) => { 
+if (!text) throw ` اكتب سؤالك ليتم الرد عليه\nمثل\n*${usedPrefix + command} Hoy va llover?*`   
+let pre =` 
+❔سؤال:  *${text}*
+✅ جواب: *${['لا','اي', 'ممكن', 'امممم بفكر', 'اكيد لا', 'ربما لا', 'ربما نعم', 'بفكر في امر' ].getRandom()}*
+༺═•⊰『 𝑹𝑨𝑪𝑯𝑬𝑳🪶 』⊱•═༻`.trim() 
+
+conn.reply(m.chat, pre, m, null, m.mentionedJid ? {
 mentions: m.mentionedJid
-} : {})
+} : {}) }
+  
 handler.help = ['pregunta <texto>?']
 handler.tags = ['kerang']
-handler.command = /^pregunta|preguntas|apakah$/i
+handler.command = /^pregunta|ريتشل$/i  
 export default handler
+
+
+
+
+
+

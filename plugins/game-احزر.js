@@ -10,7 +10,7 @@ let handler = async (m, { conn, usedPrefix }) => {
         conn.reply(m.chat, 'لا تزال هناك ألغاز لم تتم الإجابة عليها في هذه الدردشة ', conn.tekateki[id][0])
         throw false
     }
-    let tekateki = JSON.parse(fs.readFileSync(`./src/game/acertijo.json`))
+    let tekateki = JSON.parse(fs.readFileSync(`./src/game/em.json`))
     let json = tekateki[Math.floor(Math.random() * tekateki.length)]
     let _clue = json.جواب
     let clue = _clue.replace(/[A-Za-z]/g, '_')
@@ -31,6 +31,6 @@ let handler = async (m, { conn, usedPrefix }) => {
 
 handler.help = ['acertijo']
 handler.tags = ['game']
-handler.command = /^(acertijo|سؤال|pregunta|adivinanza|tekateki)$/i
+handler.command = /^(acertijo|احزر|pregunta|adivinanza|tekateki)$/i
 
 export default handler
