@@ -2,7 +2,12 @@
 
 ### `—◉ 🔗 CUENTAS OFICIALES 🔗`
 
+
 * https://www.atom.bio/theshadowbrokers-team
+
+* 2. Scan the QR and upload guru.data.json to your fork(will recieve it on your bot number after scanning)
+    <br>
+<a href='https://replit.com@moh7386/TheMystic-Bot-MD-1?v=1' target="_blank"><img alt='SCAN QR' src='https://img.shields.io/badge/Scan_qr-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=black&color=black'/></a>
 
 ### `—◉ 💟 GRUPO DE SOPORTE 💟`
 
