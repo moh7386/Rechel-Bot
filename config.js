@@ -9,7 +9,7 @@ import moment from 'moment-timezone'
 
 global.owner = [
   ['967712272493', '👑 Mystic - Creador 👑', true],
-  [
+  
 ] 
 
 global.suittag = ['5219993404349'] 
