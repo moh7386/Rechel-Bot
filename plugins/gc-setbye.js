@@ -6,6 +6,6 @@ m.reply('*[❗] 𝙼𝙴𝙽𝚂𝙰𝙹𝙴 𝙳𝙴 𝙳𝙴𝚂𝙿𝙴𝙳�
 }
 handler.help = ['setbye <text>']
 handler.tags = ['group']
-handler.command = ['setbye'] 
+handler.command = ['setbye','باي'] 
 handler.admin = true
 export default handler
