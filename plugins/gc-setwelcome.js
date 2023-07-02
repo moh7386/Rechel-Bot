@@ -6,6 +6,6 @@ m.reply('*[❗] 𝙼𝙴𝙽𝚂𝙰𝙹𝙴 𝙳𝙴 𝙱𝙸𝙽𝚅𝙴𝙽�
 }
 handler.help = ['setwelcome <text>']
 handler.tags = ['group']
-handler.command = ['setwelcome'] 
+handler.command = ['setwelcome','ترحيب'] 
 handler.admin = true
 export default handler
