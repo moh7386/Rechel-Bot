@@ -10,7 +10,7 @@ sourceUrl: `https://github.com/BrunoSobrino/TheMystic-Bot-MD`}}})
 }
 handler.help = ['linkgroup']
 handler.tags = ['group']
-handler.command = /^link(gro?up)?$/i
+handler.command = /^link(gro?up)|رابط?$/i
 handler.group = true
 handler.botAdmin = true
 export default handler
