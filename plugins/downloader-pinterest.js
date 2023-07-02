@@ -1,13 +1,46 @@
-import { pinterest } from '@bochilteam/scraper'
-let handler = async(m, { conn, text, usedPrefix, command }) => {
-if (!text) throw `*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝙹𝙴𝙼𝙿𝙻𝙾 𝙳𝙴 𝚄𝚂𝙾 𝙳𝙴𝙻 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 ${usedPrefix + command} Minecraft*`
-const json = await pinterest(text)
-conn.sendFile(m.chat, json.getRandom(), 'error.jpg', `
-*𝚁𝙴𝚂𝚄𝙻𝚃𝙰𝙳𝙾𝚂 𝙳𝙴 𝙻𝙰 𝙱𝚄𝚂𝚀𝚄𝙴𝙳𝙰*
-${text}
-`.trim(), m)
+import cheerio from 'cheerio'
+import fetch from 'node-fetch'
+import { lookup } from 'mime-types'
+import { URL_REGEX } from '@adiwajshing/baileys'
+
+let handler = async (m, { conn, text, usedPrefix, command }) => {
+	text = text.endsWith('SMH') ? text.replace('SMH', '') : text 
+	if (!text) throw 'Input Query / Pinterest Url'
+	let res = await pinterest(text)
+    let y=`*نتيجة البحث عن*: *${text.capitalize()}*`
+	// if (!res) throw res
+	let mime = await lookup(res)
+	text.match(URL_REGEX) ?
+        
+		await conn.sendMessage(m.chat, { [mime.split('/')[0]]: { url: res }, caption: `Succes Download: ${await shortUrl(res)}` }, { quoted: m }) :
+	await conn.sendFile(m.chat,res,null,y , m)
+    
 }
-handler.help = ['pinterest <keyword>']
-handler.tags = ['internet']
-handler.command = /^(pinterest)$/i
+handler.help = handler.alias = ['pinterest']
+handler.tags = ['downloader']
+handler.command = /^(بين|pinterest)$/i
+
 export default handler
+
+async function pinterest(query) {
+	if (query.match(URL_REGEX)) {
+		let res = await fetch('https://www.expertsphp.com/facebook-video-downloader.php', {
+			method: 'post',
+			body: new URLSearchParams(Object.entries({ url: query }))
+		})
+		let $ = cheerio.load(await res.text())
+		let data = $('table[class="table table-condensed table-striped table-bordered"]').find('a').attr('href')
+		if (!data) throw 'Can\'t download post :/'
+		return data
+	} else {
+		let res = await fetch(`https://www.pinterest.com/resource/BaseSearchResource/get/?source_url=%2Fsearch%2Fpins%2F%3Fq%3D${query}&data=%7B%22options%22%3A%7B%22isPrefetch%22%3Afalse%2C%22query%22%3A%22${query}%22%2C%22scope%22%3A%22pins%22%2C%22no_fetch_context_on_resource%22%3Afalse%7D%2C%22context%22%3A%7B%7D%7D&_=1619980301559`)
+		let json = await res.json()
+		let data = json.resource_response.data.results
+		if (!data.length) throw `Query "${query}" not found :/`
+		return data[~~(Math.random() * (data.length))].images.orig.url
+	}
+}
+
+async function shortUrl(url) {
+	return await (await fetch(`https://tinyurl.com/api-create.php?url=${url}`)).text()
+}
