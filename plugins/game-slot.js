@@ -17,7 +17,7 @@ Cuanto quieres apostar?
         throw `✳️ No tienes suficiente *XP*`
     }
 
-    let emojis = ["🕊️", "🦀", "🦎"];
+    let emojis = ["🤍", "💙", "💛"];
     let a = Math.floor(Math.random() * emojis.length);
     let b = Math.floor(Math.random() * emojis.length);
     let c = Math.floor(Math.random() * emojis.length);
@@ -41,19 +41,19 @@ Cuanto quieres apostar?
     }
     let end;
     if (a == b && b == c) {
-        end = `🎁 GANASTE\n *+${apuesta + apuesta} XP*`
+        end = `🎁 فزت\n *+${apuesta + apuesta} XP*`
         users.exp += apuesta + apuesta
     } else if (a == b || a == c || b == c) {
         end = `🔮 Casi lo logras sigue intentando :) \nTen *+${reg} XP*`
         users.exp += reg
     } else {
-        end = `😔 Perdiste  *-${apuesta} XP*`
+        end = `😔 خسرت  *-${apuesta} XP*`
         users.exp -= apuesta
     }
     users.lastslot = new Date * 1
     return await m.reply(
         `
-       🎰 ┃ *SLOTS* 
+       🎰 ┃ *روليت الحظ* 
      ───────────
        ${x[0]} : ${y[0]} : ${z[0]}
        ${x[1]} : ${y[1]} : ${z[1]}
@@ -63,9 +63,9 @@ Cuanto quieres apostar?
         
 ${end}`) 
 }
-handler.help = ['slot <apuesta>']
+handler.help = ['حظ <apuesta>']
 handler.tags = ['game']
-handler.command = ['slot']
+handler.command = ['slot',حظ]
 
 export default handler
 
