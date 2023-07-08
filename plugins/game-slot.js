@@ -5,14 +5,14 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 Cuanto quieres apostar? 
 
 📌 Ejemplo :
-*${usedPrefix + command}* 100`.trim()
+*${usedPrefix + command}* 10`.trim()
     if (!args[0]) throw fa
     if (isNaN(args[0])) throw fa
     let apuesta = parseInt(args[0])
     let users = global.db.data.users[m.sender]
-    let time = users.lastslot + 10000
-    if (new Date - users.lastslot < 10000) throw `⏳ Espere *${msToTime(time - new Date())}* para usar de nuevo`
-    if (apuesta < 100) throw '✳️ Mínimo de la apuesta es *100 XP*'
+    let time = users.lastslot + 10
+    if (new Date - users.lastslot < 10) throw `⏳ Espere *${msToTime(time - new Date())}* para usar de nuevo`
+    if (apuesta < 10) throw '✳️ Mínimo de la apuesta es *100 XP*'
     if (users.exp < apuesta) {
         throw `✳️ No tienes suficiente *XP*`
     }
