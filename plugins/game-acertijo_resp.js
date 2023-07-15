@@ -8,10 +8,15 @@ const threshold = 0.72
 
 let handler = m => m
 
-handler.before = async function (m) {
-let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
+handler.before = async function (m, { conn, usedPrefix, command, text })  {
+    let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
+let pp = await conn.profilePictureUrl(who, 'image').catch(_ => gataImg.getRandom())
+let { name, limit, lastclaim, registered, regTime, age } = global.db.data.users[who]
+let user = global.db.data.users[m.sender]
+let tag = `${m.sender.split("@")[0]}`
+let aa = tag + '@s.whatsapp.net'
 let f=`❜🤹🏻‍♀️ *أنتهت* 🤹🏻‍♂️❛
-*✦↫👤المجاوب :*「${taguser}」
+*✦↫👤المجاوب :*「${name}/@${tag}」
 *✦↫💸الجائزة :*「5k」
 *✦↫⌚الوقت :*「30 ثانية」
 *•ه─────────────ه•*
@@ -25,7 +30,7 @@ let f=`❜🤹🏻‍♀️ *أنتهت* 🤹🏻‍♂️❛
 
     this.tekateki = this.tekateki ? this.tekateki : {}
 
-    if (!(id in this.tekateki)) return m.reply('انتهى هذا اللغز!')
+    if (!(id in this.tekateki)) return m.reply('إنتهى الوقت!')
 
     if (m.quoted.id == this.tekateki[id][0].id) {
 
@@ -37,7 +42,7 @@ let f=`❜🤹🏻‍♀️ *أنتهت* 🤹🏻‍♂️❛
 
             global.db.data.users[m.sender].exp += this.tekateki[id][2]
 
-            m.reply(f, null, { mentions: conn.parseMention(f) })
+          await conn.sendFile(m.chat, pp, 'gata.jpg', f, m, false, { mentions: [aa] })
 
             clearTimeout(this.tekateki[id][3])
 
