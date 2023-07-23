@@ -13,7 +13,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
         let fileId = json.result.stickers[i].thumb.file_id
         let gasIn = await fetch(`https://api.telegram.org/bot891038791:AAHWB1dQd-vi0IbH2NjKYUk-hqQ8rQuzPD4/getFile?file_id=${fileId}`)
         let jisin = await gasIn.json()
-        let stiker = await sticker(false, "https://api.telegram.org/file/bot891038791:AAHWB1dQd-vi0IbH2NjKYUk-hqQ8rQuzPD4/" + jisin.result.file_path, global.pack, global.auth)
+        let stiker = await sticker(false, "https://api.telegram.org/file/bot891038791:AAHWB1dQd-vi0IbH2NjKYUk-hqQ8rQuzPD4/" + jisin.result.file_path, global.rona, global.kana)
         await delay(5000)
         if (stiker) conn.sendFile(m.chat, stiker, 'sticker.webp', '',m, true, { contextInfo: { 'forwardingScore': 200, 'isForwarded': false, externalAdReply:{ showAdAttribution: false, title: 'احبكم', body: `h`, mediaType: 2, sourceUrl: 'انا'}}}, { quoted: m })
         await delay(3000)
