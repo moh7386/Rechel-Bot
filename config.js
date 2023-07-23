@@ -18,6 +18,8 @@ global.reportes_solicitudes = ['5219992095479']
 
 global.packname = '𝐎𝐭𝐡𝐨 𝐀𝐢🧚‍✨'
 global.author = ''
+global.pack = 'Ronaldo🥷!' 
+global.auth = 'Kna`cris💀🫶🏿' 
 global.wm = '𝐎𝐭𝐡𝐨 𝐀𝐢🧚‍✨'
 global.igfg = '𝐎𝐭𝐡𝐨 𝐀𝐢🧚‍✨'
 global.wait = '*[❗] Ƈᴀʀɢᴀɴᴅᴏ, ᴀɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ...*'
