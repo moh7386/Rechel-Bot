@@ -18,8 +18,8 @@ global.reportes_solicitudes = ['5219992095479']
 
 global.packname = '𝐎𝐭𝐡𝐨 𝐀𝐢🧚‍✨'
 global.author = ''
-global.rona = 'Ronaldo🥷!' 
-global.kana = 'Kna`cris💀🫶🏿' 
+global.rona = '𝐈𝐧𝐨✧.┊' 
+global.kana = '𝐒𝐨𝐮𝐥🎩' 
 global.wm = '𝐎𝐭𝐡𝐨 𝐀𝐢🧚‍✨'
 global.igfg = '𝐎𝐭𝐡𝐨 𝐀𝐢🧚‍✨'
 global.wait = '*[❗] Ƈᴀʀɢᴀɴᴅᴏ, ᴀɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ...*'
