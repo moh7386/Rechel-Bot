@@ -24,11 +24,21 @@ global.wm = '𝐎𝐭𝐡𝐨 𝐀𝐢🧚‍✨'
 global.igfg = '𝐎𝐭𝐡𝐨 𝐀𝐢🧚‍✨'
 global.wait = '*[❗] Ƈᴀʀɢᴀɴᴅᴏ, ᴀɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ...*'
 
-global.imagen1 = fs.readFileSync('./Menu2.jpg')
-global.imagen2 = fs.readFileSync('./src/nuevobot.jpg') 
-global.imagen3 = fs.readFileSync('./src/Pre Bot Publi.png')
-global.imagen4 = fs.readFileSync('./Menu.png')
-global.imagen5 = fs.readFileSync('./src/+18.jpg')
+
+global.imagen1 = fs.readFileSync('./media/menus/Menu3.jpg')
+global.imagen2 = fs.readFileSync('./media/menus/img1.jpg')
+global.imagen3 = fs.readFileSync('./media/menus/img2.jpg')
+global.imagen4 = fs.readFileSync('./media/menus/img3.jpg')
+global.imagen5 = fs.readFileSync('./media/menus/img4.jpg')
+global.imagen6 = fs.readFileSync('./media/menus/img5.jpg')
+global.imagen7 = fs.readFileSync('./media/menus/img6.jpg')
+global.imagen8 = fs.readFileSync('./media/menus/img7.jpg')
+global.imagen9 = fs.readFileSync('./media/menus/img8.jpg')
+global.imagen10 = fs.readFileSync('./media/menus/img9.jpg')
+global.imagen11 = fs.readFileSync('./media/menus/img10.jpg')
+global.imagen12 = fs.readFileSync('./media/menus/img11.jpg')
+global.imagen13 = fs.readFileSync('./media/menus/img12.jpg')
+global.gataImg = [imagen1, imagen2, imagen3, imagen4, imagen5, imagen6, imagen7, imagen8, imagen9, imagen10, imagen11, imagen12, imagen13]
 
 global.mods = [] 
 
