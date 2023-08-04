@@ -16,7 +16,7 @@ let user = global.db.data.users[m.sender]
 let tag = `${m.sender.split("@")[0]}`
 let aa = tag + '@s.whatsapp.net'
 let f=`❜🤹🏻‍♀️ *أنتهت* 🤹🏻‍♂️❛
-*✦↫👤المجاوب :*「${name}/@${tag}」
+*✦↫👤المجاوب :*「@${tag}」
 *✦↫💸الجائزة :*「5k」
 *✦↫⌚الوقت :*「30 ثانية」
 *•ه─────────────ه•*
