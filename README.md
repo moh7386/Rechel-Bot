@@ -40,7 +40,7 @@
   
 ### `—◉ 🌌 ACTIVAR EN REPLIT 🌌`
 
-[![Run on Repl.it](https://repl.it/badge/github/moh7386/Rachel-Bot)](https://repl.it/github/moh7386/Rachel-Bot) 
+[![Run on Repl.it](https://repl.it/badge/github/moh7386/Rachel-Bot)](https://repl.it/github/BrunoSobrino/TheMystic-Bot-MD/moh7386/Rachel-Bot) 
   
 ### `—◉ 🔰 ACTIVAR EN RENDER 🔰`
 
