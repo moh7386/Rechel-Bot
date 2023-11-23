@@ -40,7 +40,7 @@
   
 ### `—◉ 🌌 ACTIVAR EN REPLIT 🌌`
 
-[![Run on Repl.it](https://repl.it/badge/github/moh7386/Rechel-Bot)](https://repl.it/github/BrunoSobrino/moh7386/Rechel-Bot) 
+[![Run on Repl.it](https://repl.it/badge/github/moh7386/Rechel-Bot)](https://repl.it/github/moh7386/Rechel-Bot) 
   
 ### `—◉ 🔰 ACTIVAR EN RENDER 🔰`
 
